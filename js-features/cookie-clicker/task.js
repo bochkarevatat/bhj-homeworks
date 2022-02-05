@@ -1,7 +1,5 @@
 const click = document.getElementById('clicker__counter');
-
 const cookie = document.getElementById('cookie');
-
 
 cookie.onclick = () => {
     click.textContent = Number(click.textContent) + 1;
@@ -13,6 +11,4 @@ cookie.onclick = () => {
     } else {
         cookie.width = "200"
     }
-
-
 };
