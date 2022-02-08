@@ -14,7 +14,9 @@ arrowRight.onclick = () => {
 
     slider[sliderIndex].classList.remove('slider__item_active')
 
-    sliderIndex == slider.length - 1 ? slider[0].classList.add('slider__item_active') : slider[sliderIndex + 1].classList.add('slider__item_active');
+    slider[sliderIndex == slider.length - 1 ? 0 : sliderIndex + 1].classList.add('slider__item_active')
+
+
 
 };
 
@@ -24,6 +26,6 @@ arrowLeft.onclick = () => {
 
     slider[sliderIndex].classList.remove('slider__item_active')
 
-    sliderIndex == 0 ? slider[slider.length - 1].classList.add('slider__item_active') : slider[sliderIndex - 1].classList.add('slider__item_active');
-
+    // sliderIndex == 0 ? slider[slider.length - 1].classList.add('slider__item_active') : slider[sliderIndex - 1].classList.add('slider__item_active');
+    slider[sliderIndex == 0 ? slider.length - 1 : sliderIndex - 1].classList.add('slider__item_active')
 };
