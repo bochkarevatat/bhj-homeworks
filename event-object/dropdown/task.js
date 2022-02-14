@@ -13,7 +13,11 @@ function openElements (){
 dropdownActive.addEventListener("click", openElements)
 
 
-dropdownItem.forEach(item => item.addEventListener("click", () => {
+
+
+dropdownItem.forEach(item => item.addEventListener("click", (ev) => {
+    ev.preventDefault()
+    openElements ()
     dropdownActive.textContent = item.textContent
-})
-);
+    
+}));
