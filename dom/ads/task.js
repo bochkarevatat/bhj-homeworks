@@ -1,3 +1,4 @@
+//Необходимо реализовать механизм смены текстовых объявлений. Каждое объявление меняется через 1 секунду.
 const rotatorAll = Array.from(document.getElementsByClassName('rotator__case'));
 
 // console.log(rotatorAll)
