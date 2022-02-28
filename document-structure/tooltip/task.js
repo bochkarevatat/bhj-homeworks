@@ -4,7 +4,7 @@ const a = Array.from(document.getElementsByClassName('has-tooltip'));
 
 
 a.forEach(item => {
-    item.insertAdjacentHTML("afterend", '<div class="tooltip" style="left: 0; top: 0"></div>')
+    item.insertAdjacentHTML("afterEnd", '<div class="tooltip" style="left: 0; top: 0"></div>')
     item.onclick = function () {
         item.nextElementSibling.classList.toggle('tooltip_active');
         item.nextElementSibling.textContent = item.title;
