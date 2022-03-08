@@ -17,9 +17,6 @@ tasksAdd.addEventListener('click', (event) => {
 
 tasksList.addEventListener('click', (event) => {
 
-    if (event.target.closest('.task__remove')) {
+    event.target.closest('.task').remove();
 
-        event.target.closest('.task').remove();
-
-    }
 });
