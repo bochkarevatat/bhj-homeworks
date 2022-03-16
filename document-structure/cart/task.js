@@ -29,7 +29,7 @@ productAdd.forEach((item, b) => {
         if (elemProduct) {
             const valueCount = Number(elemProduct.querySelector('.cart__product-count').innerText);
             elemProduct.querySelector('.cart__product-count').innerText = valueCount + (+value);
-        } else if (value != 0) {
+        } else if (value > 0) {
             cartProducts.insertAdjacentHTML('beforeEnd', `
             <div class="cart__product" data-id="${id}">
                 <img class="cart__product-image" src="${img}">

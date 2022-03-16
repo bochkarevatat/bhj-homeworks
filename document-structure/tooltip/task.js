@@ -4,19 +4,14 @@ a.forEach(item => {
     item.onclick = function (e) {
 
         e.preventDefault()
-        if (item.nextElementSibling && item.nextElementSibling.classList.contains('tooltip')) {
+        if (!(item.nextElementSibling && item.nextElementSibling.classList.contains('tooltip'))) {
             // console.log('tik')
-
-            item.nextElementSibling.classList.toggle('tooltip_active');
-
-        } else {
             item.insertAdjacentHTML("afterEnd", '<div class="tooltip" style="left: 0; top: 0"></div>')
-            // console.log('not')
-
-        };
+        }
+        item.nextElementSibling.classList.toggle('tooltip_active');
         item.nextElementSibling.textContent = item.title;
         item.nextElementSibling.style.left = `${item.getBoundingClientRect().left}px`;
         item.nextElementSibling.style.top = `${item.getBoundingClientRect().top + 25}px`;
     };
-    
+
 });
