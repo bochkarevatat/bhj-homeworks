@@ -1,14 +1,7 @@
-const editor = document.querySelector('#editor');
+// Необходимо разработать простейший текстовый редактор, который 
+// будет сохранять своё значение даже после перезагрузки страницы.
 
-pasteText()
-
-function textEditor() {
+document.querySelector('#editor').addEventListener('input', () => {
     localStorage.text = editor.value;
-};
-
-function pasteText() {
-    if (localStorage.text) {
-        editor.value = localStorage.getItem('text');
-    }
-}
-editor.addEventListener('input', textEditoEditor);
+});
+editor.value = localStorage.getItem('text');
